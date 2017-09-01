@@ -82,7 +82,8 @@ define([
         //render the form using the form template
         $form.html(formTpl({
             serial : response.serial,
-            levels : levelData
+            levels : levelData,
+            abcValue: interaction.prop('abc')
         }));
 
         //init form javascript
@@ -94,9 +95,12 @@ define([
 
                 //update the pci property value:
                 interaction.prop('level', value);
-                
+
                 //trigger change event:
                 interaction.triggerPci('levelchange', [parseInt(value)]);
+            },
+            abcField : function(interaction, value) {
+              interaction.prop('abc', value);
             }
         });
 

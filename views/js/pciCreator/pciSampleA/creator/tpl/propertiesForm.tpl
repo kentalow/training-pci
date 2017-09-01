@@ -8,3 +8,11 @@
         {{/each}}
     </select>
 </div>
+<hr/>
+<div class="panel">
+    <label for="" class="has-icon">{{__ "ABC"}}</label>
+
+    <input type="text"
+           name="abcField"
+           value="{{abcValue}}">
+</div>
